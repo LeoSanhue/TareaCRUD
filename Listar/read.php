@@ -14,7 +14,7 @@ $imagenes = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
     </tr>
     <?php foreach ($imagenes as $imagen) { ?>
         <tr>
-
+            
             <td><?php echo $imagen['id'] ?></td>
             <td><?php echo $imagen['url'] ?></td>
             <td><a href="update.php?id=<?php echo $imagen['id'] ?>">Modificar</a></td>
@@ -28,4 +28,3 @@ $imagenes = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 foreach ($imagenes as $imagen) {
     echo "<img src='" . $imagen['url'] . "'>";
 }
-?>
